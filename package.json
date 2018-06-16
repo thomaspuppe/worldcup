@@ -1,0 +1,8 @@
+{
+  "name": "worldcup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:thomaspuppe/worldcup.git",
+  "author": "Thomas Puppe <info@thomaspuppe.de>",
+  "license": "MIT"
+}
