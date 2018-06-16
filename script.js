@@ -12,6 +12,7 @@ const renderCompletedMatch = (match) => {
 const renderCurrentMatch = (match) => {
 	return `
 	<article>
+		<small>${match.time}</small><br/>
 		${match.home_team.code} ${match.home_team.goals} : ${match.away_team.goals} ${match.away_team.code}
 	</article>`;
 }
@@ -19,7 +20,8 @@ const renderCurrentMatch = (match) => {
 const renderFutureMatch = (match) => {
 	return `
 	<article>
-		${match.home_team.country} – ${match.away_team.country}
+		${match.home_team.country} – ${match.away_team.country}<br>
+		<small>${match.datetime}</small>
 	</article>`;
 }
 
@@ -35,11 +37,11 @@ const processResponse = (json) => {
 	}
 
 	for (i in currentMatches) {
-		document.getElementById('completed').insertAdjacentHTML('beforeend', renderCurrentMatch(currentMatches[i]))
+		document.getElementById('current').insertAdjacentHTML('beforeend', renderCurrentMatch(currentMatches[i]))
 	}
 
 	for (i in futureMatches) {
-		document.getElementById('completed').insertAdjacentHTML('beforeend', renderFutureMatch(futureMatches[i]))
+		document.getElementById('future').insertAdjacentHTML('beforeend', renderFutureMatch(futureMatches[i]))
 	}
 };
 

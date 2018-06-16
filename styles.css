@@ -1,5 +1,35 @@
+html {
+	font-size: 20px;
+}
 body {
 	background: #488e54 url(background.svg) no-repeat center center fixed;
 	background-size: cover;
+	color: #fff;
+	text-align: center;
 
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-rows: 100px 1fr 50px;
+}
+
+main {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-rows: 1fr 2fr 1fr;
+}
+
+#current {
+	font-size: 2rem;
+	font-weight: bold;
+	font-family: sans-serif;
+	/* color | offset-x | offset-y | blur-radius */
+	text-shadow: #666 0.1rem 0 0.05rem; 
+}
+
+article {
+	margin-bottom: 0.5rem;
+}
+article + article {
+	padding-top: 0.5rem;
+	border-top: 1px rgba(255, 255, 255, 0.4) solid;
 }
