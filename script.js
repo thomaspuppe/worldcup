@@ -47,7 +47,7 @@ const processResponse = (json) => {
 	}
 };
 
-fetch('http://worldcup.sfg.io/matches/today').then(response => {
+fetch('https://world-cup-json.herokuapp.com/matches/today').then(response => {
 	console.log(response);
 	return response.json();
 }).then(processResponse);
