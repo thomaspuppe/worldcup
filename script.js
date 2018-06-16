@@ -32,16 +32,18 @@ const processResponse = (json) => {
 	const currentMatches = filterMatchesByStatus(json, 'in progress');
 	const futureMatches = filterMatchesByStatus(json, 'future');
 
+	const $main = document.getElementById('main');
+
 	for (i in completedMatches) {
-		document.getElementById('completed').insertAdjacentHTML('beforeend', renderCompletedMatch(completedMatches[i]))
+		$main.insertAdjacentHTML('beforeend', renderCompletedMatch(completedMatches[i]))
 	}
 
 	for (i in currentMatches) {
-		document.getElementById('current').insertAdjacentHTML('beforeend', renderCurrentMatch(currentMatches[i]))
+		$main.insertAdjacentHTML('beforeend', renderCurrentMatch(currentMatches[i]))
 	}
 
 	for (i in futureMatches) {
-		document.getElementById('future').insertAdjacentHTML('beforeend', renderFutureMatch(futureMatches[i]))
+		$main.insertAdjacentHTML('beforeend', renderFutureMatch(futureMatches[i]))
 	}
 };
 

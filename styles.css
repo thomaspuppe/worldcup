@@ -9,13 +9,9 @@ body {
 
 	display: grid;
 	grid-gap: 2rem;
-	grid-template-rows: 100px 1fr 50px;
-}
-
-main {
-	display: grid;
-	grid-gap: 1rem;
-	grid-template-rows: 1fr 2fr 1fr;
+	grid-template-rows: 100px auto 30px;
+	height: 100vh;
+	margin: 0;
 }
 
 #current {
