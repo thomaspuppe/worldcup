@@ -11,7 +11,7 @@ const renderCompletedMatch = (match) => {
 
 const renderCurrentMatch = (match) => {
 	return `
-	<article>
+	<article class="current">
 		<small>${match.time}</small><br/>
 		${match.home_team.code} ${match.home_team.goals} : ${match.away_team.goals} ${match.away_team.code}
 	</article>`;
