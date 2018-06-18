@@ -34,3 +34,13 @@ article + article {
 	padding-top: 0.5rem;
 	border-top: 1px rgba(255, 255, 255, 0.4) solid;
 }
+
+footer {
+	color: #e6ffea;
+	font-size: 0.7rem;
+	font-family: sans-serif;
+}
+
+footer a {
+	color: inherit;
+}
